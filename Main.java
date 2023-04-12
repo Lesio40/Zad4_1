@@ -12,20 +12,20 @@ import java.io.IOException;
 import java.util.Scanner;
 class Main {
   public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
+    
     try {
       Service s = new Service();
-      
+      Scanner sc = new Scanner(System.in);
       System.out.println("1.Dodaj nowego studenta");
       System.out.println("2.Wyswietl wszystkich studentow");
       System.out.println("0.Wyjscie");
-      String opcje = sc.NextLine();
+      String opcje = sc.nextLine();
       switch(opcje){
         case "1":
           System.out.println("Podaj imie");
-          String name = sc.NextLine();
+          String name = sc.nextLine();
           System.out.println("Podaj nazwisko");
-          int age = sc.NextInt();
+          int age = sc.nextInt();
           s.addStudent(new Student(name, age));
           break;
         case "2":
